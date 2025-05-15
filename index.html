@@ -3,11 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EV Sport</title>
+  <title>ZettaSpeed</title>
   <link rel="stylesheet" href="./src/CSS/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
 </head>
 <body>
-  
-  <script src="script.js"></script>
+  <header>
+    <img src="./src/assets/logo.png" alt="logo" class="logo">
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Carros</li>
+        <li>Fale conosco</li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section1">
+        <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./src/assets/img1.jpg" alt="carro1"></div>
+            <div class="swiper-slide"><img src="./src/assets/img3.jpg" alt="carro2"></div>
+            <div class="swiper-slide"><img src="./src/assets/img4.jpg" alt="carro3"></div>
+        </div>
+
+        <!-- Navegação -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+        </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
 </body>
 </html>

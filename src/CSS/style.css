@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section1 {
+    width: 100%;
+    height: 100vh; /* Tela cheia */
+    overflow: hidden;
+    position: relative;
+  }
+
+.swiper{
+    width: 100%;
+    height: 50%;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; /* Fundo para caso a imagem tenha bordas transparentes */
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobre toda a área sem distorcer */
+    border-radius: 0;
+  }
+
+.logo{
+    height: 400px;
+}
+
+header {
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    paint-order: 30px 40px;
+    flex-wrap: wrap;
+}
