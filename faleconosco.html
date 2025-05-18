@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fale Conosco | ZettaSpeed</title>
+  <link rel="stylesheet" href="./src/CSS/faleconosco.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="./src/assets/logo.png" alt="Logo ZettaSpeed" class="logo" />
+      <nav>
+        <ul class="nav-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./carros.html">Carros</a></li>
+          <li><a href="./faleconosco.html" class="active">Fale conosco</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h1>Entre em Contato</h1>
+      <p>Preencha o formulário abaixo e retornaremos em breve.</p>
+
+      <form id="contatoForm">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+
+        <!-- mensagem de sucesso (aparece via JS) -->
+        <div id="successMessage" class="success-message">
+          Formulário enviado com sucesso!
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 ZettaSpeed. Todos os direitos reservados.</p>
+      <p>📞 (11) 91234-5678 | 📍 Av. dos Motores, 1234 - São Paulo, SP</p>
+      <p>📸 <a href="https://instagram.com/zetta.speed" target="_blank">@zetta.speed</a></p>
+    </div>
+  </footer>
+  
+
+  <!-- JS para exibir a mensagem -->
+  <script>
+    const form = document.getElementById('contatoForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();             // impede envio real
+      successMessage.style.display = 'block';  // mostra a mensagem
+      form.reset();                   // limpa o formulário
+
+      // (opcional) esconde a mensagem após 5 s
+      setTimeout(() => {
+        successMessage.style.display = 'none';
+      }, 5000);
+    });
+  </script>
+</body>
+</html>

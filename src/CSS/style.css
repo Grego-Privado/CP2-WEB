@@ -31,9 +31,38 @@ header .container {
 .logo {
   font-size: 28px;
   font-weight: bold;
-  color: #584882;
+  color: #ffffff;
   line-height: 1;
 }
+
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  nav ul li a {
+    font-weight: bold;
+    text-decoration: none; 
+    color: #f8f8f8;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: var(--azul-destaque); 
+  }
 
 .links {
   list-style: none;
@@ -47,7 +76,8 @@ header .container {
   transition: color 0.3s ease;
 }
 
-.links a:hover {
+
+.nav-links a:hover {
   color: #584882; 
 }
 
@@ -66,7 +96,7 @@ a::after {
   bottom: -4px;
   width: 100%;
   height: 2px;
-  background-color: #584882;
+  background-color: #ffffff;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s ease;

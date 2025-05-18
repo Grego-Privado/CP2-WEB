@@ -1,0 +1,137 @@
+/* Reset e tema */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  :root {
+    --cor-primaria: #0a0a0a;
+    --cor-secundaria: #1a1a1a;
+    --azul-destaque: #2f4fff;
+    --texto-claro: #ffffff;
+    --texto-cinza: #999999;
+    --fundo-claro: #f5f5f5;
+  }
+  
+  body {
+    background-color: var(--fundo-claro);
+    color: var(--cor-primaria);
+  }
+  
+  /* Header */
+  header {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-bottom: 1px solid #ddd;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo { height: 60px; }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--cor-primaria);
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--azul-destaque);
+  }
+  
+  /* Formulário */
+  .form-section {
+    max-width: 600px;
+    margin: 60px auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+  .form-section h1 { font-size: 2rem; margin-bottom: 10px; }
+  .form-section p  { color: var(--texto-cinza); margin-bottom: 30px; }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+  }
+  label { font-weight: 600; }
+  
+  input, textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  input:focus, textarea:focus {
+    border-color: var(--azul-destaque);
+    outline: none;
+  }
+  
+  button {
+    background-color: var(--azul-destaque);
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  button:hover { background-color: #1f36cc; }
+  
+  /* Mensagem de sucesso */
+  .success-message {
+    display: none;            /* fica oculta até o submit */
+    margin-top: 20px;
+    color: var(--azul-destaque);
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--cor-primaria);
+    color: var(--texto-claro);
+    text-align: center;
+    padding: 20px;
+    margin-top: 80px;
+  }
+  footer {
+    background-color: var(--cor-primaria);
+    color: var(--texto-claro);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 80px;
+  }
+  
+  .footer-content p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+  }
+  
+  .footer-content a {
+    color: var(--texto-claro);
+    text-decoration: underline;
+    transition: color 0.3s;
+  }
+  
+  .footer-content a:hover {
+    color: var(--azul-destaque);
+  }
